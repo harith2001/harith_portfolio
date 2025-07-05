@@ -7,6 +7,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='Inter,Arial,sans-serif' font-size='32' fill='white'%3EHV%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+  </script>
   <style>
     :root {
       --primary-color: #2563eb;
@@ -599,6 +604,26 @@
         flex-direction: column;
         align-items: center;
       }
+
+      .modal-content {
+        margin: 2% auto;
+        width: 95%;
+        max-height: 95vh;
+        overflow-y: auto;
+        top: 0;
+        transform: none;
+        position: relative;
+      }
+
+      .modal-body {
+        padding: 1.5rem;
+      }
+
+      .modal-header {
+        border-radius: 15px 15px 0 0;
+        position: sticky;
+        top: 0;
+      }
     }
 
     /* Scroll Progress Bar */
@@ -611,6 +636,194 @@
       background: var(--primary-color);
       z-index: 9999;
       transition: width 0.1s ease;
+    }
+
+    /* Contact Form Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      background-color: var(--bg-white);
+      margin: 2% auto;
+      padding: 0;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      animation: modalSlideIn 0.3s ease;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .modal-header {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--gradient);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 15px 15px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .close {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .close:hover {
+      opacity: 0.7;
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-submit:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .form-submit:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+
+    .contact-form-btn {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-form-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-message {
+      background-color: #10b981;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .error-message {
+      background-color: #ef4444;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Custom scrollbar for modal */
+    .modal-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .modal-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 10px;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
     }
   </style>
 </head>
@@ -767,14 +980,87 @@
           <div class="project-content">
             <p>Developed a scalable microkernel-inspired system integrating blockchain, IoT, gRPC, and Kubernetes (K3s). Features runtime plugin deployment using Docker and Rancher for maximum flexibility.</p>
             <div class="project-tech">
+              <span class="tech-tag">Go</span>
               <span class="tech-tag">Blockchain</span>
               <span class="tech-tag">IoT</span>
               <span class="tech-tag">gRPC</span>
               <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">Github Actions</span>
               <span class="tech-tag">Docker</span>
+              <span class="tech-tag">CI/CD</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/harith2001/Coconut-Peat-Supply-chain_core_system" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Dashlytics</h3>
+          </div>
+          <div class="project-content">
+            <p>Dashlytics is a high-performance analytics dashboard built using Go (backend) and React + Vite + Recharts (frontend), designed to analyze and visualize large-scale CSV transaction data efficiently.</p>
+            <div class="project-tech">
+             <span class="tech-tag">Go</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">REST</span>
+              <span class="tech-tag">Github Actions</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/harith2001/Dashlytics.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Garage Service</h3>
+          </div>
+          <div class="project-content">
+            <p>Garge Service system is a microservice application, user-service is a microservice responsible for handling User Management, Authentication, and Authorization within the Garage application. It provides features like user registration, login, role-based access control, OTP verification, email notifications, and JWT-based authentication.</p>
+            <div class="project-tech">
+             <span class="tech-tag">Java </span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">SQL Database</span>
+              <span class="tech-tag">Kafka </span>
+              <span class="tech-tag">Github Actions </span>
+              <span class="tech-tag">AWS </span>
+              <span class="tech-tag">Microservices </span>
+              <span class="tech-tag">JWT</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">OTP & Email</span>
+
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/CTSE-Assignment-Y4-SE/user-service.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">AR Dashboard</h3>
+          </div>
+          <div class="project-content">
+            <p>A Web-based Augmented Reality (AR) experience developed using A-Frame and AR.js, featuring interactive 3D models displayed via marker tracking. This project includes a clean dashboard UI and multiple AR scenes, accessible with different markers.</p>
+            <div class="project-tech">
+             <span class="tech-tag">HTML+JavaScript</span>
+              <span class="tech-tag">AR</span>
+              <span class="tech-tag">A-Frame</span>
+              <span class="tech-tag">GLB/GLTF models</span>
+              <span class="tech-tag">Github Actions</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/CTSE-Assignment-Y4-SE/CTSE-Group_10_AR.git" target="_blank" class="project-link">
                 <i class="fab fa-github"></i> View Code
               </a>
             </div>
@@ -882,15 +1168,28 @@
             </div>
           </div>
           
-          <div class="contact-item">
+            <div class="contact-item" id="phoneContact" style="cursor:pointer;">
             <div class="contact-icon">
               <i class="fas fa-phone"></i>
             </div>
             <div>
               <h4>Phone</h4>
-              <p>+94-766-376-380</p>
+              <p id="phoneNumber" style="user-select:none;">Tap to reveal</p>
             </div>
-          </div>
+            </div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const phoneContact = document.getElementById('phoneContact');
+              const phoneNumber = document.getElementById('phoneNumber');
+              let revealed = false;
+              phoneContact.addEventListener('click', function() {
+              if (!revealed) {
+                phoneNumber.textContent = '+94-766-376-380';
+                revealed = true;
+              }
+              });
+            });
+            </script>
           
           <div class="contact-item">
             <div class="contact-icon">
@@ -898,7 +1197,7 @@
             </div>
             <div>
               <h4>Location</h4>
-              <p>Sri Lanka</p>
+              <p>Colombo, Sri Lanka</p>
             </div>
           </div>
         </div>
@@ -916,11 +1215,48 @@
               <i class="fas fa-file-alt"></i> CV
             </a>
           </div>
+          <button class="contact-form-btn" onclick="openContactForm()">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Send Me a Message</h2>
+        <span class="close" onclick="closeContactForm()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div id="messageContainer"></div>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
   <footer>
     <div class="container">
       <p>&copy; 2025 Harith Vithanage | Full Stack Software Engineer | Built with passion and code</p>
@@ -1012,6 +1348,90 @@
       } else {
         header.style.background = 'rgba(255, 255, 255, 0.95)';
         header.style.boxShadow = '0 1px 2px 0 rgb(0 0 0 / 0.05)';
+      }
+    });
+
+    // Contact Form Functions
+    function openContactForm() {
+      document.getElementById('contactModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeContactForm() {
+      document.getElementById('contactModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+      document.getElementById('contactForm').reset();
+      document.getElementById('messageContainer').innerHTML = '';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target == modal) {
+        closeContactForm();
+      }
+    }
+
+    // Contact Form Submission
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const messageContainer = document.getElementById('messageContainer');
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      
+      try {
+        // Using EmailJS for email sending
+        // You need to sign up at https://www.emailjs.com/ and get your keys
+        const response = await emailjs.send(
+          'service_lfkdpgv', // Replace with your EmailJS service ID
+          'template_4ii8xzf', // Replace with your EmailJS template ID
+          {
+            name: formData.name,
+            email: formData.email,
+            title: formData.subject,
+            message: formData.message,
+            to_email: 'danula243@gmail.com' // Your email
+          },
+          '41uCdVRyJdflNv8M2' // Replace with your EmailJS public key
+        );
+        
+        messageContainer.innerHTML = `
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+          </div>
+        `;
+        
+        // Reset form
+        document.getElementById('contactForm').reset();
+        
+        // Close modal after 3 seconds
+        setTimeout(() => {
+          closeContactForm();
+        }, 3000);
+        
+      } catch (error) {
+        console.error('Error sending email:', error);
+        messageContainer.innerHTML = `
+          <div class="error-message">
+            <i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly at danula243@gmail.com
+          </div>
+        `;
+      } finally {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       }
     });
   </script>
