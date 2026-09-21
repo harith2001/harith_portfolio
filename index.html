@@ -4,10 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harith Vithanage | Full Stack Software Engineer</title>
+    <meta
+      name="description"
+      content="Full Stack Software Engineer in Colombo with 3+ years building enterprise microservices. TypeScript, Java, NestJS, React. UCSC Master of Cybersecurity."
+    />
+    <meta
+      name="author"
+      content="Harith Vithanage"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <link
+      rel="canonical"
+      href="https://harith2001.github.io/harith_portfolio/"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:url"
+      content="https://harith2001.github.io/harith_portfolio/"
+    />
+    <meta
+      property="og:title"
+      content="Harith Vithanage | Full Stack Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Software Engineer in Colombo with 3+ years building enterprise-grade microservices. TypeScript, Java, NestJS, React. Published researcher and UCSC Master of Cybersecurity student."
+    />
+    <meta
+      property="og:image"
+      content="https://harith2001.github.io/harith_portfolio/me.jpg"
+    />
+    <meta property="og:image:alt" content="Harith Vithanage" />
+    <meta property="og:site_name" content="Harith Vithanage Portfolio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Harith Vithanage | Full Stack Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full Stack Software Engineer in Colombo with 3+ years building enterprise-grade microservices. TypeScript, Java, NestJS, React."
+    />
+    <meta
+      name="twitter:image"
+      content="https://harith2001.github.io/harith_portfolio/me.jpg"
+    />
+
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563eb'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.35em' font-family='Inter,Arial,sans-serif' font-size='32' fill='white'%3EHV%3C/text%3E%3C/svg%3E"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232563eb'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='700' fill='white'%3EHD%3C/text%3E%3C/svg%3E"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -16,10 +70,36 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-      // Initialize EmailJS
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Harith Vithanage",
+        "jobTitle": "Full Stack Software Engineer",
+        "url": "https://harith2001.github.io/harith_portfolio/",
+        "image": "https://harith2001.github.io/harith_portfolio/me.jpg",
+        "email": "mailto:danula243@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Colombo",
+          "addressCountry": "LK"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Colombo School of Computing"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Sri Lanka Institute of Information Technology"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/harith-vithanage-67ba72210/",
+          "https://github.com/harith2001",
+          "https://scholar.google.com/citations?user=v3MeVHkAAAAJ&hl=en"
+        ]
+      }
     </script>
     <style>
       :root {
@@ -837,6 +917,8 @@
       }
 
       .contact-form-btn {
+        display: inline-block;
+        text-decoration: none;
         background: var(--primary-color);
         color: white;
         padding: 0.75rem 2rem;
@@ -911,7 +993,7 @@
 
     <header>
       <div class="header-content">
-        <a href="me.jpg" class="logo">HV</a>
+        <a href="./" class="logo" aria-label="Harith Vithanage home">HD</a>
         <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
           <i class="fas fa-bars" id="menuIcon"></i>
         </div>
@@ -921,6 +1003,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#certifications">Certifications</a></li>
@@ -957,21 +1040,34 @@
             <div class="profile-card">
               <div class="avatar">HV</div>
               <h3>Full Stack Developer</h3>
-              <p>3 Years Experience</p>
+              <p>3+ Years Experience</p>
               <div class="social-links">
                 <a
                   href="https://www.linkedin.com/in/harith-vithanage-67ba72210/"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Harith Vithanage on LinkedIn"
                   ><i class="fab fa-linkedin"></i
                 ></a>
-                <a href="https://github.com/harith2001" target="_blank"
+                <a
+                  href="https://github.com/harith2001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Harith Vithanage on GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="https://scholar.google.com/citations?user=v3MeVHkAAAAJ&hl=en" target="_blank"
+                <a
+                  href="https://scholar.google.com/citations?user=v3MeVHkAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Harith Vithanage on Google Scholar"
                   ><i class="fab fa-google"></i
                 ></a>
                 <a
                   href="https://drive.google.com/drive/folders/1x6tmsR1OiVtOWNwV2w7bXWaLjXgb3OjP?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Harith Vithanage CV"
                   ><i class="fas fa-file-alt"></i
                 ></a>
                 <a href="mailto:danula243@gmail.com"
@@ -982,60 +1078,85 @@
           </div>
           <div class="about-text">
             <p>
-              I'm a passionate Full Stack Software Engineer with nearly 3 years
-              of experience building scalable enterprise applications using
-              agile methodologies. I specialize in full-cycle development and
-              designing robust microservices architectures.
+              Full Stack Software Engineer with 3+ years of experience building
+              enterprise-grade, microservices-based applications end to end from
+              architecture and development to QA and CI/CD. Published researcher
+              in scalable system architecture, with strong expertise in
+              TypeScript/JavaScript, Java, C#, and Go.
             </p>
             <p>
-              My expertise spans across multiple programming languages and
-              frameworks, with production-level experience in modern web
-              technologies. I'm passionate about creating efficient,
-              maintainable code and delivering high-quality software solutions.
+              Experienced in owning full project lifecycles, leading development
+              efforts, and driving stakeholder communication, requirement
+              gathering, and system analysis to deliver secure, scalable,
+              production-ready solutions.
             </p>
 
             <div class="skills-grid">
               <div class="skill-category">
                 <h3><i class="fas fa-code"></i> Languages</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag">Java</span>
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">Go</span>
+                  <span class="skill-tag">JavaScript</span>
                   <span class="skill-tag">TypeScript</span>
                   <span class="skill-tag">C#</span>
-                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">Go</span>
+                  <span class="skill-tag">Java</span>
                   <span class="skill-tag">Kotlin</span>
+                  <span class="skill-tag">Python</span>
                 </div>
               </div>
               <div class="skill-category">
                 <h3><i class="fas fa-server"></i> Frameworks</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag">Spring Boot</span>
                   <span class="skill-tag">React</span>
-                  <span class="skill-tag">NextJS</span>
+                  <span class="skill-tag">Next.js</span>
+                  <span class="skill-tag">Vue.js</span>
                   <span class="skill-tag">Node.js</span>
-                  <span class="skill-tag">NestJS</span>
                   <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">NestJS</span>
+                  <span class="skill-tag">ASP.NET</span>
+                  <span class="skill-tag">Spring Boot</span>
                   <span class="skill-tag">Material UI</span>
                   <span class="skill-tag">Bootstrap</span>
                   <span class="skill-tag">Tailwind CSS</span>
                 </div>
               </div>
               <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <h3><i class="fas fa-database"></i> Databases</h3>
                 <div class="skill-tags">
-                  <span class="skill-tag">Docker</span>
-                  <span class="skill-tag">Kubernetes (K8s & K3s)</span>
-                  <span class="skill-tag">MongoDB</span>
                   <span class="skill-tag">MySQL</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">Firebase</span>
+                  <span class="skill-tag">MSSQL</span>
                   <span class="skill-tag">PostgreSQL</span>
                   <span class="skill-tag">Redis</span>
-                  <span class="skill-tag">Keycloak</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h3><i class="fas fa-vial"></i> Testing</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Jest</span>
+                  <span class="skill-tag">JUnit</span>
+                  <span class="skill-tag">Mockito</span>
+                </div>
+              </div>
+              <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">REST APIs</span>
                   <span class="skill-tag">gRPC</span>
-                  <span class="skill-tag">REST API</span>
-                  <span class="skill-tag">Blockchain</span>
-                  <span class="skill-tag">IoT</span>
+                  <span class="skill-tag">RabbitMQ</span>
+                  <span class="skill-tag">Kafka</span>
+                  <span class="skill-tag">AWS</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">Kubernetes (K8s & K3s)</span>
                   <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub/GitLab</span>
+                  <span class="skill-tag">GitHub Actions</span>
+                  <span class="skill-tag">Keycloak</span>
+                  <span class="skill-tag">TypeORM</span>
+                  <span class="skill-tag">Cursor AI</span>
+                  <span class="skill-tag">Claude</span>
+                  <span class="skill-tag">LangChain</span>
                 </div>
               </div>
             </div>
@@ -1051,78 +1172,77 @@
           <div class="timeline-item">
             <div class="timeline-date">Oct 2025 – Present</div>
             <h3 class="timeline-title">Software Engineer</h3>
-            <div class="timeline-company">Inova IT Systems</div>
+            <div class="timeline-company">Inova IT Systems (Pvt) Ltd, Colombo, Sri Lanka</div>
             <p>
                 <ul style="margin-left: 1.5rem; line-height: 1.8;">
-                <li>Serving as Senior Software Engineer in the Forest Ticketing System project, leading full-stack development 
-                    while managing stakeholder communication, requirement gathering, and system analysis to deliver scalable 
-                    and reliable solutions. </li>
-                <li>Serving as Senior Software Engineer in the Tea Nursery project, contributing to end-to-end full-stack 
-                    development and supporting scalable system design and implementation across the application lifecycle. </li>
-                <li>Full-stack development of Gold Trust – General Pawning System, SLIIT Learning Management System (LMS) and Tea Nursery Assocation </li>
-                <li>Training and implementation support for MOSIP digital identity system rollout in Sri Lanka</li>
-                <li>Primary support team member responsible for post-implementation issue resolution</li>
-                <li>Designed and developed SMS Gateway module with single and bulk SMS functionality</li>
-                <li>Third-party API integration for reliable message delivery to customers</li>
+                <li>Assigned as Senior Software Engineer on the Tea Nursery Management and Forest Ticketing System projects, owning end-to-end delivery from design and development through QA, bug fixing, and CI/CD pipeline maintenance.</li>
+                <li>Led full-stack development of the Tea Nursery application used by 300+ external users and 100+ internal staff across the island, delivering offline capability that maintained 90% operational efficiency in low/no-connectivity areas.</li>
+                <li>Built multi-channel notifications (email, SMS, in-app), task schedulers, and automated analytics report generation to streamline daily operations.</li>
+                <li>Implemented role-based access control with secure authentication and authorization by configuring Keycloak, supporting multiple user roles.</li>
+                <li>Designed and built an SMS Gateway module with single and bulk SMS delivery, integrating third-party APIs for reliable customer messaging.</li>
+                <li>Managed stakeholder communication, requirement gathering, and system analysis to translate business needs into scalable, reliable technical solutions.</li>
+                <li>Built the frontend for the SLIIT Learning Management System (LMS), including the admin panel and role-based access control (RBAC) module.</li>
+                <li>Applied agentic AI and spec-driven development practices (Cursor AI, Claude) to accelerate full-stack delivery and enforce consistent architecture across the Tea Nursery Management System.</li>
                 </ul>
             </p>
             <div class="project-tech">
-              <span class="tech-tag">Microservices</span>
-              <span class="tech-tag">Keycloak</span>
-              <span class="tech-tag">Material UI</span>
-              <span class="tech-tag">SMS Gateway</span>
-              <span class="tech-tag">Node</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">NestJS</span>
               <span class="tech-tag">React</span>
+              <span class="tech-tag">Material UI</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">TypeORM</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">postgreSQL</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Keycloak</span>
               <span class="tech-tag">RabbitMQ</span>
+              <span class="tech-tag">Cursor AI</span>
+              <span class="tech-tag">Claude</span>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-date">Jan 2025 – Oct 2025</div>
+            <div class="timeline-date">Jan 2025 – Sep 2025</div>
             <h3 class="timeline-title">Associate Software Engineer</h3>
-            <div class="timeline-company">Inova IT Systems</div>
+            <div class="timeline-company">Inova IT Systems (Pvt) Ltd, Colombo, Sri Lanka</div>
             <p>
               <ul style="margin-left: 1.5rem; line-height: 1.8;">
-                <li>Led full-stack development of Gold Trust – General Pawning System using microservices architecture</li>
-                <li>Integrated Keycloak for secure authentication and authorization</li>
-                <li>Delivered 13 core modules with high code quality standards</li>
-                <li>Resolved 200+ critical bugs and improved system stability</li>
-                <li>Collaborated with cross-functional teams in agile environment</li>
+                <li>Led full-stack development of the Gold Trust – General Pawning System built from scratch using a microservices enabled architecture.</li>
+                <li>Implemented Keycloak-based authentication and authorization to strengthen system security.</li>
+                <li>Delivered 15+ modules and stabilized the platform by resolving 300+ defects across development and QA, improving release reliability.</li>
               </ul>
             </p>
             <div class="project-tech">
-              <span class="tech-tag">Microservices</span>
-              <span class="tech-tag">Keycloak</span>
-              <span class="tech-tag">Material UI</span>
-              <span class="tech-tag">SMS Gateway</span>
-              <span class="tech-tag">Node</span>
-              <span class="tech-tag">NestJS</span>
               <span class="tech-tag">React</span>
+              <span class="tech-tag">Material UI</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">TypeORM</span>
               <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Keycloak</span>
+              <span class="tech-tag">Agile</span>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-date">Jul 2023 – Dec 2024</div>
             <h3 class="timeline-title">Intern Software Engineer</h3>
-            <div class="timeline-company">Inova IT Systems</div>
+            <div class="timeline-company">Inova IT Systems (Pvt) Ltd, Colombo, Sri Lanka</div>
             <p>
                 <ul style="margin-left: 1.5rem; line-height: 1.8;">
-                <li>Built comprehensive frontend solutions using React and Material UI</li>
-                <li>Developed robust backend services with NestJS for core pawn management modules</li>
-                <li>Gained valuable experience in enterprise-level software development</li>
-                <li>Collaborated in agile methodologies and sprint-based development</li>
+                <li>Contributed to full-stack development of Gold Trust Pawning System, building 5 master and 4 transaction modules that improved operational efficiency.</li>
+                <li>Replicated a Leave Request Management System (SLAAMB) as a training project to build hands-on industry experience.</li>
                 </ul>
             </p>
             <div class="project-tech">
               <span class="tech-tag">React</span>
               <span class="tech-tag">Material UI</span>
-              <span class="tech-tag">Node</span>
               <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">TypeORM</span>
+              <span class="tech-tag">PrismaORM</span>
               <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Agile</span>
             </div>
           </div>
         </div>
@@ -1141,20 +1261,22 @@
             </div>
             <div class="project-content">
               <p>
-                Developed a scalable microkernel-inspired system integrating
-                blockchain, IoT, gRPC, and Kubernetes (K3s). Features runtime
-                plugin deployment using Docker and Rancher for maximum
-                flexibility.
+                Designed a novel microkernel-inspired architecture for my
+                final-year research, enabling microservices to be deployed at
+                runtime and reducing low-level coding effort. Achieved 99.9%
+                system uptime through the adaptive architecture. Integrated
+                blockchain (Ethereum) and IoT sensors to deliver end-to-end
+                supply chain transparency for stakeholders.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">Go</span>
-                <span class="tech-tag">Blockchain</span>
-                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">MongoDB</span>
                 <span class="tech-tag">gRPC</span>
-                <span class="tech-tag">Kubernetes</span>
-                <span class="tech-tag">Github Actions</span>
+                <span class="tech-tag">MQTT</span>
+                <span class="tech-tag">Ethereum</span>
+                <span class="tech-tag">K3s</span>
                 <span class="tech-tag">Docker</span>
-                <span class="tech-tag">CI/CD</span>
+                <span class="tech-tag">Rancher</span>
               </div>
               <div class="project-links">
                 <a
@@ -1332,15 +1454,20 @@
             </div>
             <div class="project-content">
               <p>
-                A comprehensive e-commerce backend with secure role-based access
-                control, deployed via IIS. Built with modern technologies
-                ensuring scalability and security.
+                Built a scalable backend serving concurrent web and mobile
+                users, sustaining ~200 requests/second per user at ~200ms
+                average response time. Implemented JWT-based authentication with
+                role-based access control supporting 5+ user roles. Architected
+                a maintainable, modular backend folder structure for long-term
+                scalability. Deployed to production on an IIS server.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">C#</span>
-                <span class="tech-tag">MongoDB</span>
                 <span class="tech-tag">Kotlin</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">REST APIs</span>
                 <span class="tech-tag">IIS</span>
+                <span class="tech-tag">MongoDB</span>
               </div>
               <div class="project-links">
                 <a
@@ -1391,10 +1518,17 @@
         <h2 class="section-title fade-in">Education</h2>
         <div class="timeline fade-in">
           <div class="timeline-item">
+            <div class="timeline-date">Sep 2026 – Sep 2028</div>
+            <h3 class="timeline-title">Master of Cybersecurity (MC)</h3>
+            <div class="timeline-company">
+              University of Colombo School of Computing, Colombo 07, Sri Lanka
+            </div>
+          </div>
+          <div class="timeline-item">
             <div class="timeline-date">Jun 2021 – Jun 2025</div>
             <h3 class="timeline-title">
-              BSc (Hons) in Information Technology Specializing in Software
-              Engineering
+              BSc (Hons) in Information Technology (Specializing in Software
+              Engineering)
             </h3>
             <div class="timeline-company">
               Sri Lanka Institute of Information Technology (SLIIT), Malabe, Sri
@@ -1402,11 +1536,38 @@
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-date">Jan 2007 – Jan 2021</div>
-            <h3 class="timeline-title">Physical Science Stream</h3>
+            <div class="timeline-date">Jan 2007 – Dec 2020</div>
+            <h3 class="timeline-title">Physical Science</h3>
             <div class="timeline-company">
               Nalanda College, Colombo 10, Sri Lanka
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteer">
+      <div class="container">
+        <h2 class="section-title fade-in">Volunteer Experience</h2>
+        <div class="timeline fade-in">
+          <div class="timeline-item">
+            <div class="timeline-date">2024 – 2025</div>
+            <h3 class="timeline-title">Organizing Committee</h3>
+            <div class="timeline-company">
+              SLIIT Software Engineering Student Community (SESC)
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2021 – Present</div>
+            <h3 class="timeline-title">Vice President</h3>
+            <div class="timeline-company">Esala Foundation</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2017 – 2020</div>
+            <h3 class="timeline-title">
+              Deputy Head Prefect &amp; Senior Executive Prefect
+            </h3>
+            <div class="timeline-company">Nalanda College</div>
           </div>
         </div>
       </div>
@@ -1443,8 +1604,8 @@
               <i class="fas fa-award"></i>
             </div>
             <h3>NBQSA National ICT Awards 2025</h3>
-            <p>SLIIT Nominee</p>
-            <b>Second Round Selected</b>
+            <p>Nominated from SLIIT</p>
+            <b>Finalist</b>
           </div>
           <div
             class="achievement-card"
@@ -1454,7 +1615,18 @@
               <i class="fas fa-trophy"></i>
             </div>
             <h3>SLASSCOM National Ingenuity Awards 2025</h3>
-            <p>SLIIT Nominee</p>
+            <p>Nominated from SLIIT</p>
+          </div>
+          <div
+            class="achievement-card"
+            style="flex: 1 1 300px; min-width: 280px; max-width: 350px"
+          >
+            <div class="achievement-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>SLIIT Bashaway 2024</h3>
+            <p>Competitive Programming</p>
+            <b>Participation, SLIIT Malabe</b>
           </div>
         </div>
       </div>
@@ -1757,52 +1929,16 @@
                 <i class="fas fa-file-alt"></i> CV
               </a>
             </div>
-            <button class="contact-form-btn" onclick="openContactForm()">
+            <a
+              class="contact-form-btn"
+              href="mailto:danula243@gmail.com"
+            >
               <i class="fas fa-paper-plane"></i> Send Message
-            </button>
+            </a>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Contact Form Modal -->
-    <div id="contactModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Send Me a Message</h2>
-          <span class="close" onclick="closeContactForm()">&times;</span>
-        </div>
-        <div class="modal-body">
-          <div id="messageContainer"></div>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell me about your project or inquiry..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="form-submit" id="submitBtn">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
 
     <footer>
       <div class="container">
@@ -1936,92 +2072,6 @@
         });
       });
 
-      // Contact Form Functions
-      function openContactForm() {
-        document.getElementById("contactModal").style.display = "block";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeContactForm() {
-        document.getElementById("contactModal").style.display = "none";
-        document.body.style.overflow = "auto";
-        document.getElementById("contactForm").reset();
-        document.getElementById("messageContainer").innerHTML = "";
-      }
-
-      // Close modal when clicking outside
-      window.onclick = function (event) {
-        const modal = document.getElementById("contactModal");
-        if (event.target == modal) {
-          closeContactForm();
-        }
-      };
-
-      // Contact Form Submission
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          const submitBtn = document.getElementById("submitBtn");
-          const messageContainer = document.getElementById("messageContainer");
-
-          // Get form data
-          const formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value,
-          };
-
-          // Disable submit button
-          submitBtn.disabled = true;
-          submitBtn.innerHTML =
-            '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-          try {
-            // Using EmailJS for email sending
-            // You need to sign up at https://www.emailjs.com/ and get your keys
-            const response = await emailjs.send(
-              "service_lfkdpgv", // Replace with your EmailJS service ID
-              "template_4ii8xzf", // Replace with your EmailJS template ID
-              {
-                name: formData.name,
-                email: formData.email,
-                title: formData.subject,
-                message: formData.message,
-                to_email: "danula243@gmail.com", // Your email
-              },
-              "41uCdVRyJdflNv8M2", // Replace with your EmailJS public key
-            );
-
-            messageContainer.innerHTML = `
-          <div class="success-message">
-            <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
-          </div>
-        `;
-
-            // Reset form
-            document.getElementById("contactForm").reset();
-
-            // Close modal after 3 seconds
-            setTimeout(() => {
-              closeContactForm();
-            }, 3000);
-          } catch (error) {
-            console.error("Error sending email:", error);
-            messageContainer.innerHTML = `
-          <div class="error-message">
-            <i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly at danula243@gmail.com
-          </div>
-        `;
-          } finally {
-            // Re-enable submit button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML =
-              '<i class="fas fa-paper-plane"></i> Send Message';
-          }
-        });
     </script>
   </body>
 </html>
